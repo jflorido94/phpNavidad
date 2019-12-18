@@ -1,0 +1,75 @@
+.btn-c1 {
+  background-color: #c0b283; }
+
+.btn-c2 {
+  background-color: #dcd0c0; }
+
+.btn-c3 {
+  background-color: #f4f4f4; }
+
+.text-primary {
+  color: #44484a !important; }
+
+.text-dark {
+  color: #000 !important; }
+
+.text-muted {
+  color: #474747 !important; }
+
+* {
+  color: #373737; }
+
+#lateral {
+  background-color: #c0b283;
+  box-shadow: 3px 3px 10px #c0b283; }
+
+#superior {
+  background-color: #dcd0c0;
+  box-shadow: 3px 3px 10px #dcd0c0;
+  height: 52px;
+  color: #000; }
+
+#pagweb {
+  background-color: #f4f4f4;
+  height: calc(100vh - 52px); }
+
+.oculto {
+  display: none; }
+
+#lateral {
+  min-width: 17rem;
+  width: 17rem;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: all 0.5s; }
+
+#lateral.active {
+  margin-left: -17rem; }
+
+#contenido {
+  width: calc(100% - 17rem);
+  margin-left: 17rem;
+  transition: all 0.5s; }
+
+#contenido.active {
+  width: 100%;
+  margin: 0; }
+
+@media (max-width: 768px) {
+  #lateral {
+    margin-left: -17rem; }
+
+  #lateral.active {
+    margin-left: 0; }
+
+  #contenido {
+    width: 100%;
+    margin-left: 0; }
+
+  #contenido.active {
+    width: calc(100% - 17rem);
+    margin-left: 17rem; } }
+
+/*# sourceMappingURL=estilos.css.map */
