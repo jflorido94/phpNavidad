@@ -1,6 +1,6 @@
 <?php 
 
-class nombreModelo extends modelo
+class solicitudesModelo extends modelo
 {
   
   function __construct()

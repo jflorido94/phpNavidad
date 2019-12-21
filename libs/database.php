@@ -18,9 +18,9 @@ class database
   function connect()
   {
     try {
-      $this->conexion = new PDO("mysql:host=$this->host;dbname=$this->db", $this->user, $this->pass);
-      $this->conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-      return TRUE;
+      $pdo = new PDO("mysql:host=$this->host;dbname=$this->db", $this->user, $this->pass);
+      $pdo -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+      return $pdo;
     } catch (PDOException $ex) {
       return $ex->getMessage();
     }

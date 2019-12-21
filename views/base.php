@@ -7,7 +7,7 @@ class vista
   {
   }
 
-  function render($nombre){
+  function cargarvista($nombre){
     require 'views/' . $nombre . '.php';
   }
 

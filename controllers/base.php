@@ -10,12 +10,14 @@ class controlador
     $this->vista = new vista();
   }
 
-  function cargarmodelo($nombre)
+  public function cargarmodelo($nombre)
   {
     $ruta = 'models/' . $nombre . '.php';
 
     if (file_exists($ruta)) {
       require $ruta;
+
+      $nombre.= 'Modelo' ;
       $this->modelo = new $nombre;
     }
   }

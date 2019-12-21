@@ -17,9 +17,11 @@ require_once 'controllers/errores.php';
         if (isset($url[1])) {
           $controlador->{$url[1]}();
         }
+        $controlador->cargar();
 
       }else {
         $controlador= new errores();
+        $controlador->cargar();
       }
 
     }

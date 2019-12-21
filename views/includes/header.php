@@ -45,10 +45,10 @@
       </div>
       <!-- **********Cambiar por un menu desplegable ? -->
       <div>
-        <a href="<?php echo constant('URL')?>sesion/entrar">
+        <a href="<?php echo constant('URL')?>sesion">
           <button id="login" type="button" class="btn btn-c3 rounded-pill shadow-sm px-3 m-2"><i class="fa fa-sign-in mr-2"></i>Entrar</button>
         </a>
-        <a href="<?php echo constant('URL')?>sesion/registrar">
+        <a href="<?php echo constant('URL')?>registro">
           <button id="register" type="button" class="btn btn-c3 rounded-pill shadow-sm px-3 m-2"><i class="fa fa-arrow-circle-o-down mr-2"></i>Registrarse</button>
         </a>
         <a href="<?php echo constant('URL')?>sesion/salir">
