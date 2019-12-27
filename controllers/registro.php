@@ -2,8 +2,6 @@
 
 class registro extends controlador
 {
-  private $nuevousuario = ['usuario', 'nombre' , 'apellidos' , 'email' , 'password'];
-
   function __construct()
   {
     parent::__construct();
