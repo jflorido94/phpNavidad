@@ -19,6 +19,9 @@
 * {
   color: #373737; }
 
+a:hover {
+  text-decoration: none; }
+
 #lateral {
   background-color: #c0b283;
   box-shadow: 3px 3px 10px #c0b283; }

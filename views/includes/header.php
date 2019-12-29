@@ -1,5 +1,6 @@
 <!-- ******Barra de navegacion Lateral******* -->
 <nav class="lateral" id="lateral">
+<a href="<?php echo constant('URL') ?>">
   <div class="py-4 px-3 mb-4 ">
     <div class="media d-flex align-items-center">
       <img src="<?php echo constant('URL') ?>images/avatar.png" alt="..." width="80" class="mr-3">
@@ -10,6 +11,7 @@
       </div>
     </div>
   </div>
+  </a>
   <div>
   <p class="text-uppercase px-3 pb-2 mb-0"><b>Incidencias</b></p>
   <ul class="nav flex-column mb-0">
@@ -17,10 +19,10 @@
       <a href="<?php echo constant('URL') ?>incidencias/listado" class="mx-2 nav-link text-dark font-italic">
         <i class="fa fa-eye mr-2"></i>Ver</a>
     </li>
-    <li class="nav-item">
+    <!-- <li class="nav-item">
       <a href="<?php echo constant('URL') ?>mensajes/listado" class="mx-2 nav-link text-dark font-italic">
         <i class="fa fa-comments mr-2"></i>Mensajes</a>
-    </li>
+    </li> -->
   </ul>
   </div>
   <div class="
@@ -50,8 +52,7 @@
       <!-- **********Cambiar por un menu desplegable ? -->
       <div>
         <a href="<?php echo constant('URL') ?>sesion">
-          <button id="login" type="button" class="btn btn-c3 rounded-pill shadow-sm px-3 m-2"><i class="fa fa-sign-in mr-2"></i>Entrar</button>
-        </a>
+          <button id="login" type="button" class="btn btn-c3 rounded-pill shadow-sm px-3 m-2"><i class="fa fa-sign-in mr-2"></i>Entrar</button></a>
         <a href="<?php echo constant('URL') ?>registro">
           <button id="register" type="button" class="btn btn-c3 rounded-pill shadow-sm px-3 m-2"><i class="fa fa-arrow-circle-o-down mr-2"></i>Registrarse</button>
         </a>

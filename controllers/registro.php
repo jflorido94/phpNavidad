@@ -27,6 +27,8 @@ class registro extends controlador
     }
     $this->vista->mensaje= $mensaje;
 
+    $this->cargar();
+
   }
 
 }

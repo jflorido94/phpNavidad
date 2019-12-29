@@ -4,6 +4,7 @@ require_once 'controllers/errores.php';
   {
     function __construct()
     {
+      try {
       $url = isset($_GET['url']) ? $_GET['url'] : 'main';
       $url = rtrim($url,'/');
       $url = explode('/', $url);
@@ -20,8 +21,12 @@ require_once 'controllers/errores.php';
         $controlador->cargar();
 
       }else {
-        $controlador= new errores();
-        $controlador->cargar();
+        throw new Exception("Error!! controlador no encontrado");
+      }
+      
+      } catch (Exception $ex) {
+        $controlador = new errores();
+        $controlador->cargar($ex);
       }
 
     }

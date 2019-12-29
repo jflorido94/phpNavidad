@@ -10,6 +10,6 @@
   <?php 
     include 'includes/header.php';
   ?>
-  <h1>ERRORES</h1>
+    <h4><?php echo $ex->get_message(); ?></h4>
 </body>
 </html>
