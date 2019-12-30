@@ -8,7 +8,7 @@ class nombre extends controlador
     parent::__construct();
 
   }
-  public function cargar(){
+  public function mostrar(){
     $this->vista->cargarvista('nombre');
     }
 

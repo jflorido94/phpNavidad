@@ -9,7 +9,7 @@ class main extends controlador
     
   }
 
-  public function cargar(){
+  public function mostrar(){
     $this->vista->cargarvista('main');
     }
 

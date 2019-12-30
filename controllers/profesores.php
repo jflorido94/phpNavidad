@@ -9,10 +9,6 @@ class profesores extends controlador
 
   }
 
-  public function cargar(){
-    // $this->vista->cargarvista('profesores');
-
-  }
   public function solicitudes(){
     $solicitudes = $this->modelo->getsol();
     $this->vista->solicitudes=$solicitudes;
@@ -28,7 +24,7 @@ class profesores extends controlador
     header('location: solicitudes');
 
   }
-  public function listado(){
+  public function mostrar(){
     $profesores = $this->modelo->getprof();
     $this->vista->profesores=$profesores;
     $this->vista->cargarvista('profesores');

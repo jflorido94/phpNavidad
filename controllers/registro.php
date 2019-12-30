@@ -8,7 +8,7 @@ class registro extends controlador
     $this->vista->mensaje ="";
   }
 
-  public function cargar(){
+  public function mostrar(){
   $this->vista->cargarvista('registro');
   }
 
@@ -27,7 +27,7 @@ class registro extends controlador
     }
     $this->vista->mensaje= $mensaje;
 
-    $this->cargar();
+    $this->mostrar();
 
   }
 

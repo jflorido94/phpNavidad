@@ -9,8 +9,6 @@
 <body>
   <?php 
     include 'includes/header.php';
-
-    var_dump($this->profesores['datos']);
   ?>
 
   <div class="container row">
@@ -38,8 +36,8 @@
         <!-- <td><?php echo $row['Contraseña']?></td> -->
         <td><?php echo ($row['Admin']==1)?'<i class="fa fa-check-circle"></i>':'<i class="fa fa-times-circle"></i>'    ?></td>
         <td>
-        <a class="btn btn-outline-success btn-sm" href="<?php echo constant('URL')?>profesores/admprof">Admin</a>
-        <a class="btn btn-outline-danger btn-sm" href="<?php echo constant('URL')?>profesores/delprof">Eliminar</a>
+        <a class="btn btn-outline-success btn-sm" href="<?php echo constant('URL')."profesores/admprof/".$row['Usuario']?>">Admin</a>
+        <a class="btn btn-outline-danger btn-sm" href="<?php echo constant('URL')."profesores/delprof/".$row['Usuario']?>">Eliminar</a>
         </td>
       </tr>
     <?php } ?>

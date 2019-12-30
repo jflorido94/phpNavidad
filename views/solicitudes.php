@@ -34,8 +34,8 @@
         <td><?php echo $row['Email']?></td>
         <!-- <td><?php echo $row['Contraseña']?></td> -->
         <td>
-        <a class="btn btn-outline-success btn-sm" href="<?php echo constant('URL')?>profesores/acesol">Aceptar</a>
-        <a class="btn btn-outline-danger btn-sm" href="<?php echo constant('URL')?>profesores/delsol">Eliminar</a>
+        <a class="btn btn-outline-success btn-sm" href="<?php echo constant('URL')."profesores/acesol/".$row['usuario']?>">Aceptar</a>
+        <a class="btn btn-outline-danger btn-sm" href="<?php echo constant('URL')."profesores/delsol/".$row['usuario']?>">Eliminar</a>
         </td>
       </tr>
     <?php } ?>

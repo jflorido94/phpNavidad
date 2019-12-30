@@ -7,12 +7,8 @@ class incidencias extends controlador
   {
     parent::__construct();
   }
-  public function cargar()
-  {
-    // $this->vista->cargarvista('incidencias');
-  }
 
-  public function listado()
+  public function mostrar()
   {
     $incidencias = $this->modelo->getinc();
     $this->vista->incidencias = $incidencias;

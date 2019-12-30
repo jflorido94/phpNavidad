@@ -33,9 +33,9 @@
         <!-- <td><?php echo $row['Email']?></td> -->
         <!-- <td><?php echo $row['Contraseña']?></td> -->
         <td>
-        <a class="btn btn-outline-info btn-sm" href="<?php echo constant('URL')?>profesores/detinc">Detalles</a>
-        <a class="btn btn-outline-warning btn-sm" href="<?php echo constant('URL')?>profesores/detinc">Mensajes</a>
-        <a class="btn btn-outline-danger btn-sm" href="<?php echo constant('URL')?>profesores/delprof">Eliminar</a>
+        <a class="btn btn-outline-info btn-sm" href="<?php echo constant('URL')."profesores/detinc/".$row['Id'] ?>">Detalles</a>
+        <a class="btn btn-outline-warning btn-sm" href="<?php echo constant('URL')."profesores/detinc/".$row['Id'] ?>">Mensajes</a>
+        <a class="btn btn-outline-danger btn-sm" href="<?php echo constant('URL')."profesores/delprof/".$row['Id'] ?>">Eliminar</a>
         </td>
       </tr>
     <?php } ?>

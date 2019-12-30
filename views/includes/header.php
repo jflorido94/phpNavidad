@@ -16,11 +16,11 @@
   <p class="text-uppercase px-3 pb-2 mb-0"><b>Incidencias</b></p>
   <ul class="nav flex-column mb-0">
     <li class="nav-item">
-      <a href="<?php echo constant('URL') ?>incidencias/listado" class="mx-2 nav-link text-dark font-italic">
+      <a href="<?php echo constant('URL') ?>incidencias/mostrar" class="mx-2 nav-link text-dark font-italic">
         <i class="fa fa-eye mr-2"></i>Ver</a>
     </li>
     <!-- <li class="nav-item">
-      <a href="<?php echo constant('URL') ?>mensajes/listado" class="mx-2 nav-link text-dark font-italic">
+      <a href="<?php echo constant('URL') ?>mensajes/mostrar" class="mx-2 nav-link text-dark font-italic">
         <i class="fa fa-comments mr-2"></i>Mensajes</a>
     </li> -->
   </ul>
@@ -35,7 +35,7 @@
           <i class="fa fa-user-plus mr-2"></i>Solicitudes</a>
       </li>
       <li class="nav-item">
-        <a href="<?php echo constant('URL') ?>profesores/listado" class="mx-2 nav-link text-dark font-italic">
+        <a href="<?php echo constant('URL') ?>profesores/mostrar" class="mx-2 nav-link text-dark font-italic">
           <i class="fa fa-users mr-2"></i>Listado</a>
       </li>
     </ul>

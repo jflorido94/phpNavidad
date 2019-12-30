@@ -10,6 +10,6 @@
   <?php 
     include 'includes/header.php';
   ?>
-    <h4><?php echo $ex->get_message(); ?></h4>
+    <h4><?php echo($this->ex)?></h4>
 </body>
 </html>

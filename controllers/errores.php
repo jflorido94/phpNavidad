@@ -9,8 +9,8 @@ class errores extends controlador
 
   }
 
-  public function cargar(Exception $ex){
-    $this->vista->$ex=$ex;
+  public function mostrar(string $ex){
+    $this->vista->ex=$ex;
     $this->vista->cargarvista('errores');
     }
 
