@@ -14,14 +14,14 @@ class profesores extends controlador
     $this->vista->solicitudes=$solicitudes;
     $this->vista->cargarvista('solicitudes');
   }
-  public function acesol(){
-    $this->modelo->acesol();
-    header('location: solicitudes');
+  public function acesol($param = null){
+    var_dump($this->modelo->acesol($param));
+    header('location: ../solicitudes');
 
   }
-  public function delsol(){
-    $this->modelo->delsol();
-    header('location: solicitudes');
+  public function delsol($param = null){
+    $this->modelo->delsol($param);
+    header('location: ../solicitudes');
 
   }
   public function mostrar(){
@@ -29,14 +29,13 @@ class profesores extends controlador
     $this->vista->profesores=$profesores;
     $this->vista->cargarvista('profesores');
   }
-  public function admprof(){
-    $this->modelo->acesol();
-    header('location: profesores');
-
+  public function admprof($param = null){
+    $this->modelo->admprof($param);
+    header('location: ../mostrar');
   }
-  public function delprof(){
-    $this->modelo->delsol();
-    header('location: profesores');
+  public function delprof($param = null){
+    $this->modelo->delprof($param);
+    header('location: ../mostrar');
 
   }
 

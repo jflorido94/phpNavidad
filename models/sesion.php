@@ -15,7 +15,8 @@ class sesionModelo extends modelo
       $resultado["correcto"]=false;
       $resultado["datos"]=null;
 
-      $query = $this->db->connect()->prepare('Select * from profesores where Usuario=:usuario and Contraseña=:pass');
+      $sql = "SELECT * from profesores where Usuario=:usuario and Contraseña=:pass";
+      $query = $this->db->connect()->prepare($sql);
       $query->execute([
         'usuario' => $usuario,
         'pass' => $contraseña

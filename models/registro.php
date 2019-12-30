@@ -11,11 +11,12 @@ class registroModelo extends modelo
   public function insert($nuevoregistro)
   {
     try {
-      $query = $this->db->connect()->prepare('Insert into solicitud (nombre, apellidos, email, contraseña)
-                                            VALUES(:nombre, :apellidos, :email, :password)');
-      $query->execute([
-        'nombre' => $nuevoregistro['nombre'], 'apellidos' => $nuevoregistro['apellidos'],
-        'email' => $nuevoregistro['email'], 'password' => $nuevoregistro['password']
+      $sql = "INSERT into solicitud (usuario, nombre, apellidos, email, contraseña)
+              VALUES(:usuario,:nombre, :apellidos, :email, :password)";
+      $query = $this->db->connect()->prepare($sql);
+      $query->execute(['usuario' =>$nuevoregistro['usuario'],
+        'nombre'  => $nuevoregistro['nombre'],  'apellidos' => $nuevoregistro['apellidos'],
+        'email'   => $nuevoregistro['email'],   'password'  => $nuevoregistro['password']
       ]);
       return true;
     } catch (PDOException $ex) {

@@ -24,7 +24,7 @@ require_once 'controllers/errores.php';
             if (sizeof($url)>2) {
               $param=[];
               for ($i=2; $i < sizeof($url); $i++) { 
-                array_push($param,$url['i']);
+                array_push($param,$url[$i]);
               } //llamamos a la funcion con parametros
               $controlador->{$url[1]}($param);
             }else { //sin parametros llamamos a la funcion sin parametros
