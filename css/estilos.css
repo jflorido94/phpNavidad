@@ -1,39 +1,42 @@
 .btn-c1 {
-  background-color: #c0b283; }
+  background-color: #000000; }
 
 .btn-c2 {
-  background-color: #dcd0c0; }
+  background-color: #61a5e6; }
 
 .btn-c3 {
-  background-color: #f4f4f4; }
+  background-color: #000000; }
 
 .text-primary {
-  color: #44484a !important; }
+  color: #06172b !important; }
 
 .text-dark {
-  color: #000 !important; }
+  color: #adc430 !important; }
 
 .text-muted {
-  color: #474747 !important; }
+  color: #cccccc !important; }
+
+.text-titulo {
+  color: #61a5e6; }
 
 * {
-  color: #373737; }
+  color: #06172b; }
 
 a:hover {
   text-decoration: none; }
 
 #lateral {
-  background-color: #c0b283;
-  box-shadow: 3px 3px 10px #c0b283; }
+  background-color: #000000;
+  box-shadow: 3px 3px 10px #000000; }
 
 #superior {
-  background-color: #dcd0c0;
-  box-shadow: 3px 3px 10px #dcd0c0;
+  background-color: #61a5e6;
+  box-shadow: 3px 3px 10px #61a5e6;
   height: 52px;
-  color: #000; }
+  color: #adc430; }
 
-#pagweb {
-  background-color: #f4f4f4;
+.pagweb {
+  background-color: #61a5e6;
   height: calc(100vh - 52px); }
 
 .oculto {

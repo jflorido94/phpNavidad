@@ -6,18 +6,18 @@
       <img src="<?php echo constant('URL') ?>images/avatar.png" alt="..." width="80" class="mr-3">
       <!-- rounded-circle img-thumbnail shadow -->
       <div class="media-body">
-        <h4 class="m-0"><b>Menú</b></h4>
+        <h4 class="m-0"><b  class="text-titulo">Menú</b></h4>
         <p class="text-muted mb-0">Ies San Sebastian</p>
       </div>
     </div>
   </div>
   </a>
   <div>
-  <p class="text-uppercase px-3 pb-2 mb-0"><b>Incidencias</b></p>
+  <p class="text-uppercase px-3 pb-2 mb-0"><b  class="text-muted">Incidencias</b></p>
   <ul class="nav flex-column mb-0">
     <li class="nav-item">
-      <a href="<?php echo constant('URL') ?>incidencias/mostrar" class="mx-2 nav-link text-dark font-italic">
-        <i class="fa fa-eye mr-2"></i>Ver</a>
+      <a href="<?php echo constant('URL') ?>incidencias/mostrar" class="mx-2 nav-link text-titulo font-italic">
+        <i class="fa fa-eye mr-2 text-titulo"></i>Ver</a>
     </li>
     <!-- <li class="nav-item">
       <a href="<?php echo constant('URL') ?>mensajes/mostrar" class="mx-2 nav-link text-dark font-italic">
@@ -28,15 +28,15 @@
   <div class="
   <?php //echo ($_SESSION['Admin'] == 1)?'':'oculto';?>
   ">
-  <p class="text-uppercase px-3 pb-2 pt-5 mb-0"><b>Usuarios</b></p>
+  <p class="text-uppercase px-3 pb-2 pt-5 mb-0"><b class="text-muted">Usuarios</b></p>
     <ul class="nav flex-column mb-0">
       <li class="nav-item">
-        <a href="<?php echo constant('URL') ?>profesores/solicitudes" class="mx-2 nav-link text-dark font-italic">
-          <i class="fa fa-user-plus mr-2"></i>Solicitudes</a>
+        <a href="<?php echo constant('URL') ?>profesores/solicitudes" class="mx-2 nav-link text-titulo font-italic">
+          <i class="fa fa-user-plus mr-2 text-titulo"></i>Solicitudes</a>
       </li>
       <li class="nav-item">
-        <a href="<?php echo constant('URL') ?>profesores/mostrar" class="mx-2 nav-link text-dark font-italic">
-          <i class="fa fa-users mr-2"></i>Listado</a>
+        <a href="<?php echo constant('URL') ?>profesores/mostrar" class="mx-2 nav-link text-titulo font-italic ">
+          <i class="fa fa-users mr-2 text-titulo"></i>Listado</a>
       </li>
     </ul>
   </div>
@@ -44,21 +44,22 @@
 
 <!-- ******Contenido de la pagina******* -->
 <article class="" id="contenido">
-  <nav class="" id="superior">
+  <nav class="fijo" id="superior">
     <div class="d-flex justify-content-between">
       <div>
-        <button id="ocultar" type="button" class="btn btn-c1 rounded-pill shadow-sm px-3 m-2 ml-4"><i class="fa fa-exchange"></i></button>
+        <button id="ocultar" type="button" class="btn btn-c1 rounded-pill shadow-sm px-3 m-2 ml-4"><i class="fa fa-exchange text-titulo"></i></button>
       </div>
       <!-- **********Cambiar por un menu desplegable ? -->
       <div>
         <a href="<?php echo constant('URL') ?>sesion">
-          <button id="login" type="button" class="btn btn-c3 rounded-pill shadow-sm px-3 m-2"><i class="fa fa-sign-in mr-2"></i>Entrar</button></a>
+          <button id="login" type="button" class="btn btn-c3 rounded-pill shadow-sm px-3 m-2 text-titulo"><i class="fa fa-sign-in mr-2 text-titulo"></i>Entrar</button></a>
         <a href="<?php echo constant('URL') ?>registro">
-          <button id="register" type="button" class="btn btn-c3 rounded-pill shadow-sm px-3 m-2"><i class="fa fa-arrow-circle-o-down mr-2"></i>Registrarse</button>
+          <button id="register" type="button" class="btn btn-c3 rounded-pill shadow-sm px-3 m-2 text-titulo"><i class="fa fa-arrow-circle-o-down mr-2 text-titulo"></i>Registrarse</button>
         </a>
         <a href="<?php echo constant('URL') ?>sesion/salir">
-          <button id="logout" type="button" class="oculto btn btn-c3 rounded-pill shadow-sm px-3 m-2 mr-4"><i class="fa fa-sign-out mr-2"></i>Cerrar Sesión</button>
+          <button id="logout" type="button" class="oculto btn btn-c3 rounded-pill shadow-sm px-3 m-2 mr-4 text-titulo"><i class="fa fa-sign-out mr-2 text-titulo"></i>Cerrar Sesión</button>
         </a>
         <div>
         </div>
   </nav>
+  <div class="pagweb">

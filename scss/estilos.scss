@@ -1,14 +1,15 @@
 // *****************************
 //  Colores personalizados
 // // *****************************
-$c1:#c0b283;
-$c2:#dcd0c0;
-$c3:#f4f4f4;
-$c4:#a7b3a5;
-$t1:#44484a;
-$t2:#000;
-$t3:#474747;
-$t4:#373737;
+$c1:#000000; //boton y barra lateral
+$c2:#61a5e6; //barra superior
+$c3: $c1; //botones registro
+$c4: $c2; //fondo
+
+$t1:#06172b; //text primary
+$t2:#adc430; //text dark
+$t3:#cccccc; //ies san sebastian
+$t4:$c2; //letras barras #94c9d5
 // ----------------------------------------
 // Colores pagina web
 // ------------------------------------------
@@ -31,12 +32,16 @@ $t4:#373737;
 .text-muted{
   color: $t3 !important;
 }
-*{
+.text-titulo{
   color: $t4;
+}
+*{
+  color: $t1;
 }
 a:hover{
   text-decoration: none;
 }
+
 
 #lateral{
   background-color: $c1;
@@ -48,8 +53,8 @@ a:hover{
   height: 52px;
   color: $t2;
 }
-#pagweb{
-  background-color: $c3;
+.pagweb{
+  background-color: $c4;
   height: calc(100vh - 52px);
 }
 

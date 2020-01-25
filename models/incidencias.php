@@ -27,7 +27,7 @@ class incidenciasModelo extends modelo
       return $resultado;
     }
   }
-  public function acesol(){
+  public function detinc($param){
     try {
       $resultado = [];
       $resultado["correcto"]=false;
@@ -42,7 +42,7 @@ class incidenciasModelo extends modelo
       return $resultado;
     }
   }
-  public function delsol(){
+  public function meninc($param){
     try {
       $resultado = [];
       $resultado["correcto"]=false;
@@ -55,6 +55,21 @@ class incidenciasModelo extends modelo
       $resultado["correcto"]=false;
       $resultado["datos"] = $ex->getMessage();
       return $resultado;
+    }
+  }
+  public function delinc($param){
+    try {
+
+      $sql = "DELETE FROM incidencias where usuario = :usuario";
+      $query= $this->db->connect()->prepare($sql);
+      $query->execute(['usuario'=>$param['0']]);
+      
+      return true;
+    } catch (PDOException $ex) {
+      // $resultado["correcto"]=false;
+      // $resultado["datos"] = $ex->getMessage();
+      // return $resultado;
+      return false;
     }
   }
 

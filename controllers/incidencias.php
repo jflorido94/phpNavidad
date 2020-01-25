@@ -14,14 +14,16 @@ class incidencias extends controlador
     $this->vista->incidencias = $incidencias;
     $this->vista->cargarvista('incidencias');
   }
-  public function admprof()
+  public function detinc($param = null)
   {
-    $this->modelo->acesol();
-    header('location: profesores');
+    $this->modelo->detinc($param);
   }
-  public function delprof()
+  public function meninc($param = null){
+    $this->modelo->meninc($param);
+  }
+  public function delinc($param = null)
   {
-    $this->modelo->delsol();
-    header('location: profesores');
+    $this->modelo->delinc($param);
+    header('location: incidencias');
   }
 }
