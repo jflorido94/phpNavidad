@@ -22,7 +22,7 @@
       <p><input type="email" name="email" id="" placeholder="e-Mail" required></p>
       <p><input type="password" name="password" id="" placeholder="Contraseña" required></p>
       <p><input type="password" name="passconfirm" id="" placeholder="Confirmar Contraseña" required></p>
-      <p><input class="btn btn-c1 rounded-pill shadow-sm px-3" type="submit" value="Registrarse"></p>
+      <p><input class="btn btn-c1 rounded-pill shadow-sm px-3 text-titulo" type="submit" value="Registrarse"></p>
     </form>
     </div>
     <div class="col"></div>

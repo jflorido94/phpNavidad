@@ -1,0 +1,45 @@
+-------------Proximo que hacer------------------------------------
+
+añadir incidencias
+Cambiar id de aula por aula en mostrar incidencias
+Editar detalles de la incidencia
+añadir mensajes de las incidencias
+paginacion en los mensajes y textarea para la respuesta
+cambiar x if emisor==Logueado derecha
+
+Preguntar si desea borrarlo (o no)
+
+----------------Poner bonito-------------------------------------
+
+Detalles incidencias
+Mensajes incidencias receptor
+
+#########################################################################
+
+-----Cosas que pide en la practica----------------------------Hecho
+    Logueado con personalizacion de pantallas                   +
+    Control de sesion de usuario                                 
+    Opcion olvido de contraseña                                 -
+    Captcha en registro de usuario                              -
+    Validarse con Google o Facebook                             -
+    Control de versiones                                        V
+    Documentacion de la aplicacion                              -
+    Buscar usuario/incidencias por campos                       -
+    Gestionar envio de mensajes entre usuarios                  -
+    Gestionar envio de correos entre usuarios                   -
+    Mostrar lista de incidencias (reg/pag y ir a pag)           +
+    Generar PDF                                                 -
+    Registrar incidencias                                       
+    Uso de CKeditor                                             -
+    Modificar informacion de incidencias                        +
+    Borrar incidencias                                          +
+    Ordenacion por taller o fecha                               -
+    Utilizacion de bootstrap                                    V
+    Utilizar PDO y MVC                                          V
+    Mostrar lista de acciones paginada                          §
+    Log de registro de acciones                                 -
+        Logueado                                                -
+        Alta                                                    -
+        Baja                                                    -
+        Actualizacion                                           -
+    Despliegue de la aplicacion                                 -

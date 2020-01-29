@@ -19,10 +19,10 @@
       <a href="<?php echo constant('URL') ?>incidencias/mostrar" class="mx-2 nav-link text-titulo font-italic">
         <i class="fa fa-eye mr-2 text-titulo"></i>Ver</a>
     </li>
-    <!-- <li class="nav-item">
-      <a href="<?php echo constant('URL') ?>mensajes/mostrar" class="mx-2 nav-link text-dark font-italic">
-        <i class="fa fa-comments mr-2"></i>Mensajes</a>
-    </li> -->
+    <li class="nav-item">
+      <a href="<?php echo constant('URL') ?>incidencias/anadir" class="mx-2 nav-link text-titulo font-italic">
+        <i class="fa fa-plus mr-2 text-titulo"></i>Añadir</a>
+    </li>
   </ul>
   </div>
   <div class="
@@ -62,4 +62,4 @@
         <div>
         </div>
   </nav>
-  <div class="pagweb">
+  <div class="pagweb ">

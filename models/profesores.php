@@ -114,12 +114,14 @@ class profesoresModelo extends modelo
         $sql = "UPDATE profesores SET Admin = :admin WHERE Usuario = :usuario "; 
         $query = $this->db->connect()->prepare($sql);
         $query->execute([
-          'usuario'   => $user['Usuario'], 'admin'   => 0] );
+          'usuario'   => $user['Usuario'], 
+          'admin'   => 0] );
       } else {
         $sql = "UPDATE profesores SET Admin = :admin WHERE Usuario = :usuario "; 
         $query = $this->db->connect()->prepare($sql);
         $query->execute([
-          'usuario'   => $user['Usuario'], 'admin'   => 1] );
+          'usuario'   => $user['Usuario'], 
+          'admin'   => 1] );
       }
 
       return true;

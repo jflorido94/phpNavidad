@@ -9,22 +9,31 @@
 <body>
   <?php 
     include 'includes/header.php';
+    // var_dump($this->detalles['datos'])
   ?>
 
+<div class="container">
     <h3>Incidencias</h3>
 
-    <p><label>Aula: </label>
-    <input type="text" name="aula" id="" required>
+    <label>Id: </label>
+    <p><input type="text" name="id" id="" value=<?php echo $this->detalles['datos'][0]['Id']?> ></p>
+
+    <label>Aula: </label>
+    <p><input type="text" name="aula" id="" required value=<?php echo $this->detalles['datos'][0]['Aula']?>></p>
+
+    <label>Fecha: </label>
+    <p><input type="date" name="fecha" id="" required value=<?php echo $this->detalles['datos'][0]['Fecha']?>></p>
 
     <label>Profesor: </label>
-    <input type="text" name="profesor" id="" required></p>
+    <p><input type="text" name="profesor" id="" required value="<?php echo $this->detalles['datos'][0]['Nombre']." ".
+     $this->detalles['datos'][0]['Apellidos'];?>"></p>
 
-    <p><label>E-mail: </label>
-    <input type="text" name="email" id="" required></p>
+    <label>E-mail: </label>
+    <p><input type="text" name="email" id="" required value=<?php echo $this->detalles['datos'][0]['Email']?>></p>
 
-    <p><label>Detalles: </label></p>
-    <textarea name="detalles" id=""></textarea>
-
+    <label>Detalles: </label>
+    <p><textarea name="detalles" id=""><?php echo $this->detalles['datos'][0]['Detalles']?></textarea>
+  </div>
   <? include 'includes/footer.php'; ?>
 </body>
 </html>

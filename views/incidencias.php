@@ -9,6 +9,7 @@
 <body>
   <?php 
     include 'includes/header.php';
+    // var_dump($this->incidencias['datos'])
 ?>
 
 <div class="container row">
@@ -19,6 +20,7 @@
       <tr>
         <!-- <th>#</th> -->
         <th>Aula</th>
+        <th>Fecha</th>
         <th>Profesor</th>
         <th>E-mail</th>
         <th>Acciones</th>
@@ -29,13 +31,14 @@
       <tr>
         <!-- <td><?php echo $row['Id']?></td> -->
         <td><?php echo $row['Aula']?></td>
+        <td><?php echo $row['Fecha']?></td>
         <td><?php echo $row['Nombre']." ". $row['Apellidos']?></td>
         <td><?php echo $row['Email']?></td>
         <td>
         <div class="btn-group">
-        <a class="btn btn-success btn-sm" href="<?php echo constant('URL')."profesores/detinc/".$row['Id'] ?>">Detalles</a>
-        <a class="btn btn-dark btn-sm" href="<?php echo constant('URL')."profesores/meninc/".$row['Id'] ?>">Mensajes</a>
-        <a class="btn btn-danger btn-sm" href="<?php echo constant('URL')."profesores/delinc/".$row['Id'] ?>">Eliminar</a>
+        <a class="btn btn-success btn-sm" href="<?php echo constant('URL')."incidencias/detinc/".$row['Id'] ?>">Detalles</a>
+        <a class="btn btn-dark btn-sm" href="<?php echo constant('URL')."incidencias/meninc/".$row['Id'] ?>">Mensajes</a>
+        <a class="btn btn-danger btn-sm" href="<?php echo constant('URL')."incidencias/delinc/".$row['Id'] ?>">Eliminar</a>
         </div>
         </td>
       </tr>
