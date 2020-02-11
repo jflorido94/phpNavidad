@@ -2,9 +2,12 @@
 
 class sesion extends controlador
 {
-  
+
   function __construct()
   {
+    if (UserSession::existCurrentUser()) {
+      header("location: ". constant("URL"));
+    }
     parent::__construct();
 
   }
@@ -21,11 +24,10 @@ class sesion extends controlador
     $bdusuario = $this->modelo->iniciar($usuario,$contraseña);
 
     if ($bdusuario['correcto']) {
-      session_start();
-      $usuario=$bdusuario['datos']['0'];
-      $_SESSION['useract']=$usuario['Usuario'];
-      $_SESSION['nombre']=$usuario['Nombre']." ".$usuario['Apellidos'];
-      $_SESSION['admin']=$usuario['Admin'];
+      $user = $bdusuario['datos']['0'];
+      UserSession::setCurrentUser($user);
+      
+      header("location:" . constant('URL'));
     }else {
       echo "error";
       $this->vista->errorsql=$bdusuario['datos'];
@@ -33,7 +35,9 @@ class sesion extends controlador
   }
 
   function salir(){
-    
+
+    UserSession::sessionClose();
+    header("location:" . constant('URL'));
   }
 
 }

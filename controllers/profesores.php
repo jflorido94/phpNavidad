@@ -5,6 +5,9 @@ class profesores extends controlador
   
   function __construct()
   {
+    if (!UserSession::getCurrentUserAdmin()) {
+      header("location: ". constant("URL"));
+    }
     parent::__construct();
 
   }

@@ -10,12 +10,12 @@
     include 'includes/header.php';
   ?>  
 
-    <?php echo $this->mensaje; ?>
     <div class="container row">
     <div class="col"></div>
     <div class="col">
     <form action="<?php echo constant('URL');?>registro/iniciar" method="post">
       <h2>Iniciar Sesion</h2>
+      <p class="alert alert-<?php echo $this->mensaje[1];?>"><?php echo $this->mensaje[0];?></p>
       <p><input type="text" name="usuario" id="" placeholder="Usuario" required></p>
       <p><input type="text" name="nombre" id="" placeholder="Nombre" required></p>
       <p><input type="text" name="apellidos" id="" placeholder="Apellidos" required></p>

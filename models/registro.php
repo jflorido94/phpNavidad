@@ -19,8 +19,9 @@ class registroModelo extends modelo
         'email'   => $nuevoregistro['email'],   'password'  => $nuevoregistro['password']
       ]);
       return true;
+      
     } catch (PDOException $ex) {
-      return $ex;
+      return false;
     }
   }
 }

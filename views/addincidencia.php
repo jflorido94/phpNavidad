@@ -26,17 +26,14 @@
     <div class="container row">
         <div class="col-2"></div>
         <div class="col">
-            <form action="<?php echo constant('URL');?>incidencias/add" method="post">
+            <form action="<?php echo constant('URL'); ?>incidencias/add" method="post">
                 <h2>Nueva incidencia</h2>
-
-                <p>
-                    <!-- <label for="">Aula: </label> -->
-                    <select name="aula">
+                <p> <select name="aula">
                         <option selected>--Aula--</option>
-                            <?php foreach ($this->aulas['datos'] as $row) {?>
-                                <option value="<?php echo $row['Id']?>">
+                        <?php foreach ($this->aulas['datos'] as $row) { ?>
+                            <option value="<?php echo $row['Id'] ?>">
                                 <?php echo $row['Aula'] ?></option>
-                            <?php }    ?>
+                        <?php }    ?>
                     </select></p>
                 <p><textarea name="detalles" id="" cols="30" rows="10" placeholder="Detalles"></textarea></p>
                 <p><input class="btn btn-c1 rounded-pill shadow-sm px-3 text-titulo" type="submit" value="Agregar"></p>

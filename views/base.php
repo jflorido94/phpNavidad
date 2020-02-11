@@ -3,6 +3,7 @@
 class vista
 {
   public $errorsql = null;
+  
   function __construct()
   {
     

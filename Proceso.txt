@@ -1,6 +1,9 @@
 -------------Proximo que hacer------------------------------------
 
-añadir incidencias
+añadir incidencias cambiar prof en modelo
+
+
+filtrar y/o ordenar por campos
 Cambiar id de aula por aula en mostrar incidencias
 Editar detalles de la incidencia
 añadir mensajes de las incidencias

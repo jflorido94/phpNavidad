@@ -110,18 +110,17 @@ class profesoresModelo extends modelo
       $query->execute(['usuario'=>$param['0']]);
       $user = $query->fetchAll(PDO::FETCH_ASSOC)['0'];
 
+      
+      $sql = "UPDATE profesores SET Admin = :admin WHERE Usuario = :usuario "; 
+      $query = $this->db->connect()->prepare($sql);
       if ($user['Admin']==1) {
-        $sql = "UPDATE profesores SET Admin = :admin WHERE Usuario = :usuario "; 
-        $query = $this->db->connect()->prepare($sql);
         $query->execute([
           'usuario'   => $user['Usuario'], 
           'admin'   => 0] );
       } else {
-        $sql = "UPDATE profesores SET Admin = :admin WHERE Usuario = :usuario "; 
-        $query = $this->db->connect()->prepare($sql);
-        $query->execute([
-          'usuario'   => $user['Usuario'], 
-          'admin'   => 1] );
+          $query->execute([
+            'usuario'   => $user['Usuario'], 
+            'admin'   => 1] );
       }
 
       return true;

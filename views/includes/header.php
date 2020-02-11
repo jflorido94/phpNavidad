@@ -25,9 +25,9 @@
     </li>
   </ul>
   </div>
-  <div class="
-  <?php //echo ($_SESSION['Admin'] == 1)?'':'oculto';?>
-  ">
+  <div>
+  <?php if (UserSession::getCurrentUserAdmin()) {?>
+    
   <p class="text-uppercase px-3 pb-2 pt-5 mb-0"><b class="text-muted">Usuarios</b></p>
     <ul class="nav flex-column mb-0">
       <li class="nav-item">
@@ -39,9 +39,9 @@
           <i class="fa fa-users mr-2 text-titulo"></i>Listado</a>
       </li>
     </ul>
+    <?php } ?>
   </div>
 </nav>
-
 <!-- ******Contenido de la pagina******* -->
 <article class="" id="contenido">
   <nav class="fijo" id="superior">
@@ -51,14 +51,18 @@
       </div>
       <!-- **********Cambiar por un menu desplegable ? -->
       <div>
+        <?php
+        if (!UserSession::existCurrentUser()) { ?>
         <a href="<?php echo constant('URL') ?>sesion">
           <button id="login" type="button" class="btn btn-c3 rounded-pill shadow-sm px-3 m-2 text-titulo"><i class="fa fa-sign-in mr-2 text-titulo"></i>Entrar</button></a>
         <a href="<?php echo constant('URL') ?>registro">
           <button id="register" type="button" class="btn btn-c3 rounded-pill shadow-sm px-3 m-2 text-titulo"><i class="fa fa-arrow-circle-o-down mr-2 text-titulo"></i>Registrarse</button>
         </a>
+        <?php }else{?>
         <a href="<?php echo constant('URL') ?>sesion/salir">
-          <button id="logout" type="button" class="oculto btn btn-c3 rounded-pill shadow-sm px-3 m-2 mr-4 text-titulo"><i class="fa fa-sign-out mr-2 text-titulo"></i>Cerrar Sesión</button>
+          <button id="logout" type="button" class=" btn btn-c3 rounded-pill shadow-sm px-3 m-2 mr-4 text-titulo"><i class="fa fa-sign-out mr-2 text-titulo"></i>Cerrar Sesión</button>
         </a>
+        <?php } ?>
         <div>
         </div>
   </nav>

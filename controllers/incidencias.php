@@ -5,6 +5,9 @@ class incidencias extends controlador
 
   function __construct()
   {
+    if (!UserSession::existCurrentUser()) {
+      header("location: ". constant("URL"));
+    }
     parent::__construct();
   }
 

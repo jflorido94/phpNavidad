@@ -9,12 +9,13 @@
 <body>
   <?php 
     include 'includes/header.php';
-  
-  // if (isset($_SESSION['useract'])) {
-  //     header('location: panelcontrol');
-  // }else {
-  //   header('location: sesion');
-  // }
+    if (!UserSession::existCurrentUser()) {
+      header("location: ". constant('URL')."sesion");
+    }elseif (UserSession::getCurrentUserAdmin()) {
+      echo "Administrador";
+    }else {
+      echo "Hola Profesor del monton";
+    }
   ?>
 
 
