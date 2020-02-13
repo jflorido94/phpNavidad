@@ -16,12 +16,15 @@ class UserSession {
     $_SESSION['userName']=$user['Nombre']." ".$user['Apellidos'];
     $_SESSION['userAdmin']=$user['Admin'];
   }
+  
   static public function getCurrentUser(){
     return $_SESSION['user'];
   }
+
   static public function getCurrentUserName(){
     return $_SESSION['userName'];
   }
+
   static public function getCurrentUserAdmin(){
     if (isset($_SESSION['user'])) {
       if($_SESSION['userAdmin']==1){
@@ -29,9 +32,7 @@ class UserSession {
       }else {
         return false;
       }
-      
     }
-    
   }
 
   public function sessionClose(){

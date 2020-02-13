@@ -23,7 +23,7 @@ class registro extends controlador
     'nombre'     => $_POST['nombre'],
     'apellidos'  => $_POST['apellidos'],
     'email'      => $_POST['email'],
-    'password'   => $_POST['password']];  
+    'password'   => sha1($_POST['password'])];  
     if($this->modelo->insert($nuevousuario)){
       $mensaje=["Registro realizado correctamente, espere a que un administrador acepte la solicitud","success"];
     }else {

@@ -14,7 +14,8 @@ class incidenciasModelo extends modelo
       $resultado["correcto"]=false;
       $resultado["datos"]=null;
 
-      $sql = "SELECT * FROM `incidencias`,`profesores` where `incidencias`.`Profesor`=`profesores`.`Usuario`";
+      $sql = "SELECT * FROM `incidencias`,`profesores`,`aulas` where `incidencias`.`Aula`=`aulas`.`Idaula` and
+                       `incidencias`.`Profesor`=`profesores`.`Usuario`";
       $query = $this->db->connect()->prepare($sql);
       $query->execute();
 
@@ -47,13 +48,14 @@ class incidenciasModelo extends modelo
     }
   }
 
+
   public function insert($aula,$detalles){
     try {
       $sql = "INSERT INTO incidencias ( Aula, Fecha, Profesor, Detalles) 
             VALUES (:aula, current_time(), :profesor, :detalles)";
       $query = $this->db->connect()->prepare($sql);
       $query->execute(['aula' =>$aula,
-        'profesor' => "prof",
+        'profesor' => UserSession::getCurrentUser(),
         'detalles'   => $detalles
       ]);
       return true;
@@ -68,7 +70,7 @@ class incidenciasModelo extends modelo
       $resultado["correcto"]=false;
       $resultado["datos"]=null;
 
-      $sql = "SELECT * FROM `incidencias`,`profesores` where incidencias.Profesor=profesores.Usuario AND incidencias.Id= :id";
+      $sql = "SELECT * FROM `incidencias`,`profesores`,`aulas` where incidencias.Aula=aulas.idaula and incidencias.Profesor=profesores.Usuario AND incidencias.Id= :id";
       $query = $this->db->connect()->prepare($sql);
       $query->execute(['id'   => $param[0]] );
 
@@ -79,6 +81,38 @@ class incidenciasModelo extends modelo
       $resultado["correcto"]=false;
       $resultado["datos"] = $ex->getMessage();
       return $resultado;
+    }
+  }
+
+  public function upddetalle($param){
+    try {
+      $sql = "UPDATE `incidencias` SET `Aula` = :aula, `Detalles` = :detalle 
+      WHERE `incidencias`.`Id` = :id";
+      $query = $this->db->connect()->prepare($sql);
+      $query->execute([
+        'aula' =>$param[2],
+        'id' => $param[0],
+        'detalle'   => $param[1]
+      ]);
+      return true;
+    } catch (PDOException $ex) {
+      return $ex;
+    }
+  }
+  public function addmensaje($mensaje){
+    try {
+      $sql = "INSERT INTO `mensajes` (`Id`, `Incidente`, `Emisor`, `Receptor`, `Mensaje`) 
+                                  VALUES (NULL, :id, :emisor, :receptor, :mensaje)";
+      $query = $this->db->connect()->prepare($sql);
+      $query -> execute([
+        'id'=> $mensaje[0],
+        'receptor'=>"admin",
+        'emisor' => $mensaje[2],
+        'mensaje' => $mensaje[1]
+      ]);
+      return true;
+    } catch (PDOException $ex) {
+      return $ex;
     }
   }
   public function meninc($param){

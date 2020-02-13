@@ -31,7 +31,7 @@
                 <p> <select name="aula">
                         <option selected>--Aula--</option>
                         <?php foreach ($this->aulas['datos'] as $row) { ?>
-                            <option value="<?php echo $row['Id'] ?>">
+                            <option value="<?php echo $row['Idaula'] ?>">
                                 <?php echo $row['Aula'] ?></option>
                         <?php }    ?>
                     </select></p>

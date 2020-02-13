@@ -19,7 +19,7 @@ class sesion extends controlador
   function iniciar(){
 
     $usuario = $_POST['usuario'];
-    $contraseña = $_POST['password'];
+    $contraseña = sha1($_POST['password']);
     
     $bdusuario = $this->modelo->iniciar($usuario,$contraseña);
 
@@ -30,7 +30,7 @@ class sesion extends controlador
       header("location:" . constant('URL'));
     }else {
       echo "error";
-      $this->vista->errorsql=$bdusuario['datos'];
+      header("location:" . constant('URL'));
     }
   }
 

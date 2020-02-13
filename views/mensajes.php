@@ -23,10 +23,10 @@
           <?php echo $this->mensajes['referencia'][0]['Detalles'] ?>
         </div>
         <div class="col-2 lead"> Fecha: </br><?php echo $this->mensajes['referencia'][0]['Fecha'] ?></div>
-        
+
         <?php for ($i = 0; $i < count($this->mensajes['datos']); $i++) {
 
-          if ($i % 2 == 0) { //cambiar por mirar si el emisor es el logeado →
+          if ($this->mensajes['datos'][$i]['Emisor'] == UserSession::getCurrentUser()) { //cambiar por mirar si el emisor es el logeado →
         ?>
             <div class="col-5">
             </div>
@@ -41,6 +41,12 @@
             </div>
         <?php }
         } ?>
+
+        <form action="<?php echo constant('URL') . "incidencias/addmen/" . $this->mensajes['referencia'][0]['Id'] ?>" method="post">
+          <label>Nuevo Mensaje: </label>
+          <p><textarea cols="70" rows="6" name="mensaje" id=""></textarea>
+          <button class="btn btn-success  ml-4" type="submit">Enviar</button></p>
+        </form>
       </div>
     </div>
     <div class="col-2"></div>

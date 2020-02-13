@@ -13,26 +13,28 @@
   ?>
 
 <div class="container">
-    <h3>Incidencias</h3>
+    <h3>Incidencias</h3></br>
 
-    <label>Id: </label>
-    <p><input type="text" name="id" id="" value=<?php echo $this->detalles['datos'][0]['Id']?> ></p>
-
-    <label>Aula: </label>
-    <p><input type="text" name="aula" id="" required value=<?php echo $this->detalles['datos'][0]['Aula']?>></p>
-
-    <label>Fecha: </label>
-    <p><input type="date" name="fecha" id="" required value=<?php echo $this->detalles['datos'][0]['Fecha']?>></p>
-
-    <label>Profesor: </label>
-    <p><input type="text" name="profesor" id="" required value="<?php echo $this->detalles['datos'][0]['Nombre']." ".
-     $this->detalles['datos'][0]['Apellidos'];?>"></p>
-
-    <label>E-mail: </label>
-    <p><input type="text" name="email" id="" required value=<?php echo $this->detalles['datos'][0]['Email']?>></p>
-
+    <form action="<?php echo constant('URL')."incidencias/updinc/".$this->detalles['datos'][0]['Id'] ?>" method="post">
+    <p><label>Fecha: <?php echo $this->detalles['datos'][0]['Fecha']?></label></p>
+    
+    <p><label>Profesor: <?php echo $this->detalles['datos'][0]['Nombre']." ".$this->detalles['datos'][0]['Apellidos'];?></label></p>
+    
+    <p><label>E-mail: <?php echo $this->detalles['datos'][0]['Email']?></label></p>
+    
+    <p> <select name="aula">
+                        <option selected>--Aula--</option>
+                        <?php foreach ($this->aulas['datos'] as $row) { ?>
+                            <option <?php echo($row['Aula']==$this->detalles['datos'][0]['Aula']) ? "selected" : "" ; ?> value="<?php echo $row['Idaula'] ?>">
+                                <?php echo $row['Aula'] ?></option>
+                        <?php }    ?>
+                    </select></p>
     <label>Detalles: </label>
-    <p><textarea name="detalles" id=""><?php echo $this->detalles['datos'][0]['Detalles']?></textarea>
+    <p><textarea name="detalles" id=""><?php echo $this->detalles['datos'][0]['Detalles']?></textarea></p>
+
+    <button class="btn btn-success btn-sm mr-4" type="submit">Guardar</button>
+    <a class="btn btn-danger btn-sm" href="<?php echo constant('URL') ?>incidencias/mostrar">Volver</a>
+    </form>
   </div>
   <? include 'includes/footer.php'; ?>
 </body>
